@@ -1,0 +1,8 @@
+housing/final_project/Lib/
+housing/final_project/Scripts/
+housing/final_project/Include/
+housing/final_project/etc/
+housing/final_project/share/
+__pycache__/
+*.pyc
+.env

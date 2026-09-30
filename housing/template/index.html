@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🏠 House Price Prediction</h1>
+
+    <form action="/predict" method="post">
+
+        <input type="number" step="any"
+               name="avg_area_income"
+               placeholder="Average Area Income"
+               required>
+
+        <input type="number" step="any"
+               name="avg_area_house_age"
+               placeholder="Average Area House Age"
+               required>
+
+        <input type="number" step="any"
+               name="avg_area_number_of_rooms"
+               placeholder="Average Area Number of Rooms"
+               required>
+
+        <input type="number" step="any"
+               name="avg_area_number_of_bedrooms"
+               placeholder="Average Area Number of Bedrooms"
+               required>
+
+        <input type="number" step="any"
+               name="area_population"
+               placeholder="Area Population"
+               required>
+
+        <button type="submit">
+            Predict Price
+        </button>
+
+    </form>
+
+    {% if prediction %}
+        <h2>
+            Predicted Price:
+            ${{ prediction }}
+        </h2>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
